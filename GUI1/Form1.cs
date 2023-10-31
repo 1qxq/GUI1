@@ -15,11 +15,16 @@ namespace GUI1
         public MinMax()
         {
             InitializeComponent();
-           
+            this.KeyPreview = true;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            textBox1.Text = Properties.Settings.Default.a.ToString();
+            textBox2.Text = Properties.Settings.Default.b.ToString();
+            textBox3.Text = Properties.Settings.Default.c.ToString();
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-           
+            if (e.KeyCode == Keys.Enter) button1.PerformClick();
         }
 
         private void button1_Click(object sender, EventArgs e)
