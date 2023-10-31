@@ -75,6 +75,36 @@ namespace GUI1
     }
     public class Logic
     {
-        
+        public static string MinMax(int a, int b, int c)
+        {
+            string Out2;
+            int max, proiz = 0;
+            if (a > b)
+            {
+                max = a;
+            }
+            else
+            {
+                max = b;
+            }
+            if (max > c)
+            {
+            }
+            else
+            {
+                max = c;
+            }
+            if ((a == b) && (a == c) || (a == b) || (a == c) || (b == c))
+            {
+                Out2 = "Введите все различные числа";
+            }
+            else
+            {
+                Out2 = ("Произведение наименьших чисел равно = " + proiz.ToString());
+            }
+            proiz = (a * b * c) / max;
+
+            return (Out2);
+        }
     }
 }
