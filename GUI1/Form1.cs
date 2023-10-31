@@ -29,7 +29,25 @@ namespace GUI1
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            int a = 0, b = 0, c = 0;
+            string Out;
+            try
+            {
+                a = Convert.ToInt32(this.textBox1.Text);
+                b = Convert.ToInt32(this.textBox2.Text);
+                c = Convert.ToInt32(this.textBox3.Text);
+                Out = Logic.MinMax(a, b, c);
+                Properties.Settings.Default.a = a;
+                Properties.Settings.Default.b = b;
+                Properties.Settings.Default.c = c;
+                Properties.Settings.Default.Save();
+            }
+            catch (FormatException)
+            {
+                Out = "Введено не целое число";
+            }
+
+            label2.Text = Out;
         }
 
         private void button2_Click(object sender, EventArgs e)
