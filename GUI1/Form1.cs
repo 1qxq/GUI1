@@ -52,7 +52,10 @@ namespace GUI1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            label2.Text = "";
         }
 
         private void label2_Click(object sender, EventArgs e)
